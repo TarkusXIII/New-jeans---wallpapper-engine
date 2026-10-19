@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101d30">
+    <meta name="description" content="Um relógio digital inspirado no universo NewJeans.">
+    <title>Time with NewJeans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow--one" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow--two" aria-hidden="true"></div>
+
+    <main class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="Time with NewJeans, início">
+                <span class="brand-mark" aria-hidden="true">✳</span>
+                <span>TIME WITH <strong>NEWJEANS</strong></span>
+            </a>
+            <span class="topbar-note"><span class="live-dot"></span> SEU CANTINHO NO TEMPO</span>
+        </header>
+
+        <section class="clock-card" aria-labelledby="page-title">
+            <div class="card-topline">
+                <span class="eyebrow"><span class="eyebrow-star">✦</span> UM MOMENTO SÓ SEU</span>
+                <div class="wallpaper-control">
+                    <span id="wallpaper-hint" class="wallpaper-hint" aria-hidden="true">Clique para trocar o papel de parede</span>
+                    <button id="btn-fundo" class="icon-button" type="button" aria-label="Mudar papel de parede" title="Mudar papel de parede">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                            <rect x="3.5" y="4.5" width="17" height="15" rx="2.5"></rect>
+                            <circle cx="9" cy="10" r="1.5"></circle>
+                            <path d="m5 17 4.5-4 3 2.5 2.5-2 4 3.5"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="intro">
+                <p class="intro-kicker">PAUSE. BREATHE. BE HERE.</p>
+                <h1 id="page-title">What time is it<br><span>there?</span></h1>
+                <p class="intro-copy">Respire fundo. O agora também merece o seu tempo.</p>
+            </div>
+
+            <div class="time-grid">
+                <section class="time-panel time-panel--local" aria-labelledby="local-title">
+                    <div class="panel-heading">
+                        <span class="location-icon" aria-hidden="true">⌖</span>
+                        <div>
+                            <h2 id="local-title">Seu horário</h2>
+                            <p>HORÁRIO LOCAL</p>
+                        </div>
+                        <span class="status-dot" aria-label="Atualizando"></span>
+                    </div>
+                    <time id="relogio-local" class="clock-display" aria-label="Horário local">00:00:00</time>
+                    <p id="data-local" class="date-display"></p>
+                    <button id="btn-fonte" class="text-button" type="button" aria-pressed="false">
+                        <span class="text-button-icon" aria-hidden="true">Aa</span>
+                        <span>Alternar estilo do relógio</span>
+                        <span class="button-arrow" aria-hidden="true">↗</span>
+                    </button>
+                </section>
+
+                <div class="timezone-divider" aria-hidden="true"><span>✳</span></div>
+
+                <section class="time-panel time-panel--away" aria-labelledby="nome-pais">
+                    <div class="panel-heading">
+                        <span class="location-icon location-icon--away" aria-hidden="true">◎</span>
+                        <div>
+                            <h2 id="nome-pais">Outro lugar</h2>
+                            <p>ESCOLHA UM DESTINO</p>
+                        </div>
+                    </div>
+                    <time id="relogio-estrangeiro" class="clock-display clock-display--muted" aria-label="Horário do destino">--:--:--</time>
+                    <p id="diferenca-horas" class="date-display">Selecione uma cidade para comparar.</p>
+                    <div class="city-picker" aria-label="Escolha um fuso horário">
+                        <button id="btn-eua" class="city-button" type="button" aria-pressed="false">
+                            <span class="city-flag" aria-hidden="true">✦</span>
+                            <span>Nova York</span>
+                            <span class="city-code">NYC</span>
+                        </button>
+                        <button id="btn-coreia" class="city-button" type="button" aria-pressed="false">
+                            <span class="city-flag city-flag--korea" aria-hidden="true">✦</span>
+                            <span>Seul</span>
+                            <span class="city-code">SEL</span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <section class="audio-visualizer" aria-label="Visualizador de áudio">
+                <div class="audio-visualizer__heading">
+                    <span class="audio-visualizer__label">VISUALIZADOR DE ÁUDIO</span>
+                    <span id="audio-status" class="audio-visualizer__status">DISPONÍVEL NO WALLPAPER ENGINE</span>
+                </div>
+                <div id="audio-bars" class="audio-visualizer__bars" aria-hidden="true"></div>
+            </section>
+
+            <footer class="card-footer">
+                <span class="footer-message">
+                    FEITO PARA VIVER CADA SEGUNDO
+                    <span class="footer-heart" aria-hidden="true">♡</span>
+                </span>
+                <span class="footer-coordinates">37°33' N&nbsp; · &nbsp;126°58' E</span>
+            </footer>
+        </section>
+
+        <p class="page-caption">SLOW DOWN, LOOK AROUND <span>✧</span> YOU'RE RIGHT ON TIME</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
